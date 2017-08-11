@@ -1,8 +1,0 @@
-webServer.py:48: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
-  GPIO.setup(3,GPIO.OUT)
-WARNING:tornado.access:404 GET /favicon.ico (192.168.1.1) 10.79ms
-WARNING:tornado.access:404 GET /favicon.ico (192.168.1.1) 3.76ms
-WARNING:tornado.access:405 GET /tryToggle (192.168.1.1) 2.48ms
-WARNING:tornado.access:404 GET /favicon.ico (192.168.1.1) 3.94ms
-webServer.py:50: RuntimeWarning: This channel is already in use, continuing anyway.  Use GPIO.setwarnings(False) to disable warnings.
-  GPIO.setup(3,GPIO.OUT)
