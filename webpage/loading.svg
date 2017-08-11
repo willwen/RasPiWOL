@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="lds-blocks" width="500px" height="500px" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid">
+   <rect x="0" y="19" width="20" height="10" fill="#53951a">
+      <animate attributeName="fill" values="#303448;#303448;#303448" keyTimes="0;0.125;1" dur="1.7s" repeatCount="indefinite" begin="0s" calcMode="discrete" />
+   </rect>
+   <rect x="40" y="19" width="20" height="20" fill="#303448">
+      <animate attributeName="fill" values="#53951a;#303448;#303448" keyTimes="0;0.125;1" dur="1.7s" repeatCount="indefinite" begin="0.2125s" calcMode="discrete" />
+   </rect>
+   <rect x="61" y="19" width="20" height="20" fill="#303448">
+      <animate attributeName="fill" values="#53951a;#303448;#303448" keyTimes="0;0.125;1" dur="1.7s" repeatCount="indefinite" begin="0.425s" calcMode="discrete" />
+   </rect>
+   <rect x="19" y="40" width="20" height="20" fill="#303448">
+      <animate attributeName="fill" values="#53951a;#303448;#303448" keyTimes="0;0.125;1" dur="1.7s" repeatCount="indefinite" begin="1.4875s" calcMode="discrete" />
+   </rect>
+   <rect x="61" y="40" width="20" height="20" fill="#303448">
+      <animate attributeName="fill" values="#53951a;#303448;#303448" keyTimes="0;0.125;1" dur="1.7s" repeatCount="indefinite" begin="0.6375s" calcMode="discrete" />
+   </rect>
+   <rect x="19" y="61" width="20" height="20" fill="#303448">
+      <animate attributeName="fill" values="#53951a;#303448;#303448" keyTimes="0;0.125;1" dur="1.7s" repeatCount="indefinite" begin="1.275s" calcMode="discrete" />
+   </rect>
+   <rect x="40" y="61" width="20" height="20" fill="#303448">
+      <animate attributeName="fill" values="#53951a;#303448;#303448" keyTimes="0;0.125;1" dur="1.7s" repeatCount="indefinite" begin="1.0625s" calcMode="discrete" />
+   </rect>
+   <rect x="61" y="61" width="20" height="20" fill="#303448">
+      <animate attributeName="fill" values="#53951a;#303448;#303448" keyTimes="0;0.125;1" dur="1.7s" repeatCount="indefinite" begin="0.85s" calcMode="discrete" />
+   </rect>
+   <circle cx="29" xy="29" r="10" stroke="blue" stroke-width="3" fill="yellow" />
+</svg>

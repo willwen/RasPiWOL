@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Raspi Wake On Lan</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+
+<!-- 	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+ -->
+</head>
+<body>
+	<nav class = "navbar">
+		<a class = "navbar-brand" href="#">Home</a>
+	</nav>
+	<div id="content" class = "container-fluid">
+		<div class = "row">
+			<nav class="col-xs-2">
+				<a class = "nav-link active">Overview</a>
+			</nav>
+			<main class="col-xs-10">
+				<h1>Dashboard</h1>
+				<section class = "row text-left">
+					<div class = "col-xs-12">
+						<h4 id="status">Current Status: <span id = "statusicon"></span></h4>
+						<br/>
+						<div class = "col-xs-3">
+							<div class = "input-group" >
+								<input type="password" name="passphrase" id="passphrase" class = "form-control" placeholder="Passphrase..." />
+								<span class = "input-group-btn" > <button id="submitButton" class = "btn btn-secondary" type = "button"> Toggle Comp</button></span>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+	<script src="bundle.js">
+	</script>
+</body>
+</html>
