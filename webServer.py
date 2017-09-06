@@ -3,12 +3,11 @@ import tornado.web
 import RPi.GPIO as GPIO
 import time
 
-def getIsPoweredOn()
-    if(GPIO.input(7))
+def getIsPoweredOn():
+    if(GPIO.input(7)):
         return True
     return False
 
-isPoweredOn = getIsPoweredOn()
 class HandleToggle(tornado.web.RequestHandler):
     def post(self):
         global isPoweredOn
@@ -55,7 +54,7 @@ if __name__ == "__main__":
     GPIO.setup(3, GPIO.OUT)
     GPIO.setup(7, GPIO.IN)
     GPIO.output(3, GPIO.LOW)
-
+    isPoweredOn = getIsPoweredOn()
     app = make_app()
     app.listen(8888)
     tornado.ioloop.IOLoop.current().start()
