@@ -10,7 +10,8 @@ def getIsPoweredOn():
 
 class HandleToggle(tornado.web.RequestHandler):
     def post(self):
-        global isPoweredOn = getIsPoweredOn();
+        global isPoweredOn
+	isPoweredOn = getIsPoweredOn();
         if(isPoweredOn):
             self.write({'status': 'disabled shutting off computer'})
             return
