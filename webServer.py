@@ -10,7 +10,10 @@ def getIsPoweredOn():
 
 class HandleToggle(tornado.web.RequestHandler):
     def post(self):
-        global isPoweredOn
+        global isPoweredOn = getIsPoweredOn();
+        if(isPoweredOn):
+            self.write({'status': 'disabled shutting off computer'})
+            return
 	body = tornado.escape.json_decode(self.request.body)
         passPhrase = body['passphrase']
 	#print(passPhrase)
