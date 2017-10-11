@@ -2,6 +2,9 @@ import tornado.ioloop
 import tornado.web
 import RPi.GPIO as GPIO
 import time
+import hashlib
+
+#Python 2.7+
 
 def getIsPoweredOn():
     if(GPIO.input(7)):
@@ -18,7 +21,7 @@ class HandleToggle(tornado.web.RequestHandler):
 	body = tornado.escape.json_decode(self.request.body)
         passPhrase = body['passphrase']
 	#print(passPhrase)
-        if(passPhrase == '0xffff'):
+        if(hashlib.sha256(passPhrase).hexdigest() == "b111e1fa18a72c65d09e75307f0fde21ae29f60193f651106a719285a5e0a91f"):
             GPIO.output(3, GPIO.HIGH)
             time.sleep(1)
             GPIO.output(3, GPIO.LOW)
