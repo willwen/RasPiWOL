@@ -13,23 +13,26 @@ def getIsPoweredOn():
 
 class HandleToggle(tornado.web.RequestHandler):
     def post(self):
-        global isPoweredOn
-	isPoweredOn = getIsPoweredOn();
-        if(isPoweredOn):
-            self.write({'status': 'disabled shutting off computer'})
-            return
-	body = tornado.escape.json_decode(self.request.body)
-        passPhrase = body['passphrase']
-	#print(passPhrase)
-        if(hashlib.sha256(passPhrase).hexdigest() == "b111e1fa18a72c65d09e75307f0fde21ae29f60193f651106a719285a5e0a91f"):
-            GPIO.output(3, GPIO.HIGH)
-            time.sleep(1)
-            GPIO.output(3, GPIO.LOW)
-            response = {'status' : 'ok'}
+        try: 
+            global isPoweredOn
             isPoweredOn = getIsPoweredOn();
-        else:
-            response = {'status' : 'bad password'}
-        self.write(response)
+            if(isPoweredOn):
+                self.write({'status': 'disabled shutting off computer'})
+                return
+            body = tornado.escape.json_decode(self.request.body)
+            passPhrase = body['passphrase']
+            #print(passPhrase)
+            if(hashlib.sha256(passPhrase).hexdigest() == "b111e1fa18a72c65d09e75307f0fde21ae29f60193f651106a719285a5e0a91f"):
+                GPIO.output(3, GPIO.HIGH)
+                time.sleep(1)
+                GPIO.output(3, GPIO.LOW)
+                response = {'status' : 'ok'}
+                isPoweredOn = getIsPoweredOn();
+            else:
+                response = {'status' : 'bad password'}
+            self.write(response)
+        except:
+            self.write({'status': 'error, check logs.'})
         return
 
 class FindStatus(tornado.web.RequestHandler):
